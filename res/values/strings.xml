@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Beverage -->
+    <string name="recommend_header">Vintips via Min vinlista Pro för Android</string>
+    
+    <!-- CellarListActivity -->
+    <string name="cellarTitle">Min Vinkällare</string>
+
+    <!-- AddWineToCellarListActivity -->
+    <string name="add_wine_to_cellar_name">Lägg till i källaren</string>
+    <string name="storageLocation_hint">Plats</string>
+    <string name="mustAddBottle">Du måste lägga till minst 1 flaska</string>
+    
+    <!-- Add -->
+    <string name="add_wine_name">Lägg till vin</string>
+    <string name="manually_add_beverage">Lägg till vin manuellt</string>    
+    
+    <!-- Generic -->
+    <string name="app_name">Min Vinlista Pro</string>
+    <string name="modify_wine_name">Ändra vin</string>    
+    
+    <!-- WineListActivity -->
+    <string name="sortOnType">Vinsort</string>
+    <string name="sortOnTypeSub">Sortera på vinsort</string>
+    <string name="sortOnCategory">Kategori</string>
+    <string name="sortOnCategorySub">Sortera på Kategori</string>
+    
+    <string name="exist">Du har redan lagt till vin med nummer</string>
+    
+    <!-- Reminder -->
+    <string name="reminderTitle">Dags att avnjuta %1$s st %2$s</string>
+    <string name="reminderNote">De är nu dags att avnjuta de flaskor som du la in i källaren %1$s</string>
+    <string name="reminderNote1">på plats %1$s</string>
+        
+    <!-- Categories in ModifyWineActivity -->
+    <string name="newCategory">Ny...</string>
+    <string name="createCategoryTitle">Ny kategori</string>
+    <string name="createCategoryMessage">Kategorinamn</string>
+
+    <!-- AlarmHelper -->
+    <string name="alarm_message">Nu är det dags att dricka %1$s flaskor %2$s från källaren</string>
+    
+    <!-- CellarActivity -->
+    <string name="removeThisFromCellar">Ta ut från källaren</string>
+    
+    <!-- Error Messages -->
+    <string name="failedToExportTryUpdate">Tyvärr gick det inte att importera din gamla databas, Säkerställ att du har den senaste version av Min Vinlista och Min Vinlista Pro installerad</string>
+    
+    <!-- Whats new -->
+    <string name="versionHeads">Version 1.0</string>
+    <string name="versionMessages">Första versionen av Min Vinlista Pro</string>
+
+</resources>

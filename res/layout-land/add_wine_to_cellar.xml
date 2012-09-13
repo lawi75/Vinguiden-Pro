@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/ModifyWineScrollView"
+	android:layout_height="fill_parent" 
+	android:layout_width="fill_parent"
+	android:background="@android:color/white" >
+	
+	<LinearLayout
+		android:orientation="vertical"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content">
+	    
+		<TableLayout 
+			android:id="@+id/TableLayoutCellar" 
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content" >			
+			
+			<TableRow>				
+				<ImageView 
+					android:id="@+id/Image_thumbUrl"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					android:background="@drawable/icon" />
+		   		
+				<LinearLayout
+					android:orientation="vertical"
+   					android:layout_width="wrap_content"
+   					android:layout_height="wrap_content" >
+
+					<TextView 
+						android:id="@+id/Text_no"
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content"	
+						android:singleLine="true"
+						android:gravity="right"			 
+						android:layout_weight="1" 
+						/>			 	    		    			
+						    					
+					<TextView 
+						android:id="@+id/Text_type"
+						android:layout_height="wrap_content"
+						android:layout_width="fill_parent"	
+						android:singleLine="true"
+						android:gravity="right"			 
+						android:layout_weight="1" />			 	    		    
+					
+						
+					<TableLayout 
+						android:layout_width="wrap_content" 
+						android:layout_height="wrap_content" >			
+
+					    <TableRow
+			    			android:layout_height="wrap_content"
+							android:layout_width="wrap_content" >					
+				
+							<ImageView 
+								android:id="@+id/Image_country_thumbUrl"
+								android:layout_width="29dp"
+								android:layout_height="17dp" 
+								android:padding="3dip"/>
+					   		
+							<TextView 
+								android:id="@+id/Text_country"
+								android:layout_height="wrap_content"
+								android:layout_width="fill_parent"
+								android:paddingLeft="10dip"
+								android:singleLine="true"
+								android:layout_weight="1" />			 
+						</TableRow>
+
+					    <TableRow
+						    android:layout_height="wrap_content"
+							android:layout_width="wrap_content" >					
+							<TextView 
+								android:layout_height="wrap_content"
+								android:layout_width="wrap_content"	
+								android:singleLine="true" 
+								android:text="@string/year" />			 
+						    			    
+							<TextView 
+								android:id="@+id/Text_year"
+								android:layout_height="wrap_content"
+								android:layout_width="fill_parent"			 
+								android:paddingLeft="10dip"
+								android:singleLine="true"
+								android:layout_weight="1" />			 
+						</TableRow>					
+				
+						<TableRow
+						    android:layout_height="wrap_content"
+							android:layout_width="wrap_content" >					
+							<TextView 
+								android:layout_height="wrap_content"
+								android:layout_width="wrap_content"	
+								android:singleLine="true" 
+								android:text="@string/strength" />			 
+						    			    
+							<TextView 
+								android:id="@+id/Text_strength"
+								android:layout_height="wrap_content"
+								android:paddingLeft="10dip"
+								android:singleLine="true"
+								android:layout_width="fill_parent"			
+								android:layout_weight="1" />			 
+						</TableRow>					
+					    					    						
+					</TableLayout>
+				</LinearLayout>				
+			</TableRow>
+	    
+			<TableRow
+			    android:layout_height="wrap_content"
+				android:layout_width="wrap_content" >					
+				<TextView 
+					android:id="@+id/label_price"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"	
+					android:singleLine="true" 
+					android:text="@string/price" />			 
+			    			    
+				<TextView 
+					android:id="@+id/Text_price"
+					android:layout_height="wrap_content"
+					android:paddingLeft="10dip"
+					android:singleLine="true"
+					android:layout_width="fill_parent"			
+					android:layout_weight="1" />			 
+			</TableRow>					
+			
+		</TableLayout>	
+																	
+		<TextView 
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"	
+			android:singleLine="true" 
+			android:text="@string/add_wine_to_cellar_name" />			 
+
+	    <de.viktorreiser.toolbox.widget.NumberPicker
+			android:id="@+id/numberPicker" 
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_marginTop="10dip"
+			android:orientation="horizontal"
+            android:layout_weight="1"
+            />
+		
+		<TableLayout 
+			android:id="@+id/TableLayoutReminder" 
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content" >			
+
+			<TableRow
+			    android:layout_height="wrap_content"
+				android:layout_width="wrap_content" >					
+				<TextView 
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"	
+					android:singleLine="true" 
+					android:text="@string/storageLocation_hint" />			 
+			    			    
+				<EditText 
+					android:id="@+id/Edit_storage"
+					android:layout_height="wrap_content"
+					android:layout_width="fill_parent"
+					android:hint="@string/storageLocation_hint"
+					android:layout_weight="1" />			 
+			</TableRow>					
+		    
+			<TableRow
+			    android:layout_height="wrap_content"
+				android:layout_width="wrap_content" >					
+				<TextView
+				    android:id="@+id/Text_comment"
+				    android:layout_height="wrap_content"
+					android:layout_width="wrap_content"	
+					android:singleLine="true" 
+					android:text="@string/comment_hint" />			 
+			    			    
+				<EditText 
+					android:id="@+id/Edit_comment"
+					android:layout_height="wrap_content"
+					android:layout_width="fill_parent"
+					android:hint="@string/comment_hint"
+					android:lines="5"
+					android:gravity="top|left" 
+					android:inputType="textMultiLine"
+	    			android:scrollHorizontally="false"				
+					android:layout_weight="1" />
+			</TableRow>							
+		    		    		
+			<TableRow
+			    android:layout_height="wrap_content"
+				android:layout_width="wrap_content" >					
+			<ImageButton
+				android:id="@+id/Image_reminder"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:scaleType="fitStart" 
+				android:src="@drawable/add_bell"
+				android:onClick="setReminder" />
+			    			    
+				<TextView 
+					android:id="@+id/Text_reminder"
+					android:layout_height="wrap_content"
+					android:layout_width="fill_parent"			
+					android:paddingLeft="10dip"
+					android:singleLine="true"
+					android:layout_weight="1" />			 
+			</TableRow>					
+		</TableLayout>	
+	</LinearLayout>
+	
+</ScrollView>

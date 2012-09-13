@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ad_is_enabled">false</string>
+    <string name="facebookAppId">392169330850637</string>
+    <string name="play_url">market://details?id=ws.wiklund.vinguiden_pro</string>
+    
+</resources>
