@@ -41,7 +41,7 @@ public class BootStrapHandler  {
 				alertDialog.setTitle(context.getString(R.string.importTitle));
 				alertDialog.setMessage(context.getString(R.string.importMessage));
 				
-				alertDialog.setButton(context.getString(R.string.importTitle), new DialogInterface.OnClickListener() {
+				alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, context.getString(R.string.importTitle), new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int which) {
 						try {
 							exportOldDatabaseToSD(context);
@@ -54,7 +54,7 @@ public class BootStrapHandler  {
 					} 
 				});
 				
-				alertDialog.setButton2(context.getString(R.string.empty), new DialogInterface.OnClickListener() {
+				alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, context.getString(R.string.empty), new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int which) {
 						alertDialog.cancel();
 					} 

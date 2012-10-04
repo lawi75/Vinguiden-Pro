@@ -92,7 +92,6 @@ public class AddWineToCellarActivity extends FragmentActivity {
 				cal.set(Calendar.MONTH, month);
 				cal.set(Calendar.DAY_OF_MONTH, day);
 				
-				
 				DialogFragment timePicker = new TimePickerFragment() {
 					@Override
 					public void onTimeSet(TimePicker view, int hourOfDay, int minute) {

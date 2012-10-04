@@ -66,13 +66,13 @@ public class LayoutHelper {
 				final File exportFile = new File(ViewHelper.getRoot(), "export_guide.csv");
 				alertDialog.setMessage(String.format(activity.getString(R.string.export_message), new Object[]{exportFile.getAbsolutePath()}));
 				
-				alertDialog.setButton(activity.getString(android.R.string.yes), new DialogInterface.OnClickListener() {
+				alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, activity.getString(android.R.string.yes), new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int which) {
 				       new ExportDatabaseCSVTask(activity, new WineDatabaseHelper(activity), exportFile, numberOfRecords).execute();
 					} 
 				});
 				
-				alertDialog.setButton2(activity.getString(android.R.string.no), new DialogInterface.OnClickListener() {
+				alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, activity.getString(android.R.string.no), new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int which) {
 						alertDialog.cancel();
 					} 

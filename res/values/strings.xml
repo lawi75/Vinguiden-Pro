@@ -47,7 +47,7 @@
     <string name="failedToExportTryUpdate">Tyvärr gick det inte att importera din gamla databas, Säkerställ att du har den senaste version av Min Vinlista och Min Vinlista Pro installerad</string>
     
     <!-- Whats new -->
-    <string name="versionHeads">Version 1.0</string>
-    <string name="versionMessages">Första versionen av Min Vinlista Pro</string>
+    <string name="versionHeads">Version 1.2£Version 1.1£Version 1.0</string>
+    <string name="versionMessages">Fixade problem med Facebookintegrationen£Mindre buggfixar£Första versionen av Min Vinlista Pro</string>
 
 </resources>

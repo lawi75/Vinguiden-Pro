@@ -11,4 +11,9 @@ public class ModifyWineActivity extends ModifyBeverageActivity {
 		return new WineDatabaseHelper(this);
 	}
 	
+	@Override
+	protected Class<?> getIntentClass() {
+		return WineListActivity.class;
+	}
+	
 }

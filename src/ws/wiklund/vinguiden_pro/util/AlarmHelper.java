@@ -29,12 +29,13 @@ public class AlarmHelper {
 			intent.putExtra("message", String.format(context.getString(R.string.alarm_message), new Object[]{cellar.getNoBottles(), beverage.getName()}));
 			intent.putExtra("cellar", cellar);
 			
-			// In reality, you would want to have a static variable for the request code instead of 192837
 			PendingIntent sender = PendingIntent.getBroadcast(context, REQUEST_CODE, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 			 
 			// Get the AlarmManager service
 			AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
 			Log.i(AlarmHelper.class.getName(), "Schedule new alarm for [" + consumptionDate + "]");
+			
+			
 			am.set(AlarmManager.RTC_WAKEUP, consumptionDate.getTime(), sender);	
 		} else if(consumptionDate != null) {
 			Log.i(AlarmHelper.class.getName(), "Got old alarm [" + consumptionDate + "] fom cellar with id [" + cellar.getId() + "], removing it");
