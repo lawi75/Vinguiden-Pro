@@ -34,7 +34,7 @@ public class CellarFlowActivity extends BaseActivity implements Notifyable {
 		super.onCreate(savedInstanceState);
 
 		if (getResources().getConfiguration().orientation != Configuration.ORIENTATION_LANDSCAPE) {
-			startActivityForResult(new Intent(getApplicationContext(), CellarListActivity.class), 0);
+			startActivity(new Intent(getApplicationContext(), CellarListActivity.class));
 		} else {
 			requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
 			setContentView(R.layout.flow);

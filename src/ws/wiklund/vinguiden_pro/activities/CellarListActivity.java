@@ -29,7 +29,7 @@ public class CellarListActivity extends CustomListActivity {
 		super.onCreate(savedInstanceState);
 
 		if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
-			startActivityForResult(new Intent(getApplicationContext(), CellarFlowActivity.class), 0);
+			startActivity(new Intent(getApplicationContext(), CellarFlowActivity.class));
 		} else {		
 			requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
 			setContentView(R.layout.list);

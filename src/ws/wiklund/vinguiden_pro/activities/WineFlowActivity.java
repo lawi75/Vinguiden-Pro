@@ -34,7 +34,7 @@ public class WineFlowActivity extends BaseActivity implements Notifyable {
 		super.onCreate(savedInstanceState);
 
 		if (getResources().getConfiguration().orientation != Configuration.ORIENTATION_LANDSCAPE) {
-			startActivityForResult(new Intent(getApplicationContext(), WineListActivity.class), 0);
+			startActivity(new Intent(getApplicationContext(), WineListActivity.class));
 		} else {
 			requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
 			setContentView(R.layout.flow);

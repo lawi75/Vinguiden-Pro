@@ -37,7 +37,7 @@ public class WineListActivity extends CustomListActivity {
 		BootStrapHandler.init(this, PRIVATE_PREF);
 		
 		if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
-			startActivityForResult(new Intent(getApplicationContext(), WineFlowActivity.class), 0);
+			startActivity(new Intent(getApplicationContext(), WineFlowActivity.class));
 		} else {
 			requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
 			setContentView(R.layout.list);

@@ -54,10 +54,10 @@ public class LayoutHelper {
 	public boolean onOptionsItemSelected(int id, final int numberOfRecords) {
 		switch (id) {
 			case ViewHelper.GO_TO_CELLAR:
-				activity.startActivityForResult(new Intent(activity, CellarListActivity.class), 0);
+				activity.startActivity(new Intent(activity, CellarListActivity.class));
 				break;
 			case R.id.menuStats:
-				activity.startActivityForResult(new Intent(activity, StatsActivity.class), 0);
+				activity.startActivity(new Intent(activity, StatsActivity.class));
 				break;
 			case R.id.menuExport:
 				final AlertDialog alertDialog = new AlertDialog.Builder(activity).create();
@@ -83,7 +83,7 @@ public class LayoutHelper {
 				alertDialog.show();
 				break;
 			case R.id.menuAbout:
-				activity.startActivityForResult(new Intent(activity, AboutActivity.class), 0);
+				activity.startActivity(new Intent(activity, AboutActivity.class));
 				break;
 		}
 		
