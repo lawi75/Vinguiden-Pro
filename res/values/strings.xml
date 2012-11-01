@@ -47,7 +47,7 @@
     <string name="failedToExportTryUpdate">Tyvärr gick det inte att importera din gamla databas, Säkerställ att du har den senaste version av Min Vinlista och Min Vinlista Pro installerad</string>
     
     <!-- Whats new -->
-    <string name="versionHeads">Version 1.2.2£Version 1.2.1£Version 1.2£Version 1.1£Version 1.0</string>
-    <string name="versionMessages">Fixade problem med kategorier samt alkoholstyrka£Fixade mindre buggar\n\nOm ni har synpunkter eller förslag på förbättringar eller upplever problem och buggar, vänligen kontakta mig på vinguiden_pro@wiklund.ws så kan jag enklare hjälpa er.£Fixade problem med Facebookintegrationen£Mindre buggfixar£Första versionen av Min Vinlista Pro</string>
+    <string name="versionHeads">Version 1.2.3£Version 1.2.2£Version 1.2.1£Version 1.2£Version 1.1£Version 1.0</string>
+    <string name="versionMessages">Fixade ett problem som kan inträffa när man försöker uppdatera en dryck£Fixade problem med kategorier samt alkoholstyrka£Fixade mindre buggar\n\nOm ni har synpunkter eller förslag på förbättringar eller upplever problem och buggar, vänligen kontakta mig på vinguiden_pro@wiklund.ws så kan jag enklare hjälpa er.£Fixade problem med Facebookintegrationen£Mindre buggfixar£Första versionen av Min Vinlista Pro</string>
 
 </resources>
