@@ -47,10 +47,12 @@ public class ModifyWineActivity extends ModifyBeverageActivity {
 		final ArrayAdapter<Category> categoryAdapter = new ArrayAdapter<Category>(this, android.R.layout.simple_spinner_dropdown_item, categories);
 		category.setAdapter(categoryAdapter);
 		
-		Category c = beverage.getCategory();
-		
-		if (c != null) {
-			category.setSelection(categoryAdapter.getPosition(c));
+		if (beverage != null) {
+			Category c = beverage.getCategory();
+			
+			if (c != null) {
+				category.setSelection(categoryAdapter.getPosition(c));
+			}
 		}
 		
 		category.setOnItemSelectedListener(new OnItemSelectedListener() {
