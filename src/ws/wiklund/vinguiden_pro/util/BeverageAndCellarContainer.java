@@ -28,6 +28,7 @@ public class BeverageAndCellarContainer {
 				c.getInt(i++),
 				new BeverageType(c.getInt(i++), c.getString(i++)),
 				c.getString(i++),
+				c.getString(i++),
 				new Country(c.getInt(i++), c.getString(i++), c.getString(i++)),
 				c.getInt(i++),
 				new Producer(c.getInt(i++), c.getString(i++)),

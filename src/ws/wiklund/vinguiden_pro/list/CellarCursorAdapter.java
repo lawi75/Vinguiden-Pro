@@ -90,7 +90,7 @@ public class CellarCursorAdapter extends SimpleCursorAdapter {
 
 				String u = container.beverage.getThumb();			
 				if (u != null) {
-					String url = u.startsWith("/") ? SystembolagetParser.BASE_URL + u : u;
+					String url = container.beverage.isCustomThumb() ? u : SystembolagetParser.BASE_URL + u;
 					holder.imageView.setTag(url);
 					BitmapManager.INSTANCE.loadBitmap(url, holder.imageView, 50, 100);
 				} else {
