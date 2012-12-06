@@ -3,10 +3,10 @@ package ws.wiklund.vinguiden_pro.activities;
 import java.util.ArrayList;
 import java.util.List;
 
-import ws.wiklund.guides.R;
 import ws.wiklund.guides.activities.ModifyBeverageActivity;
 import ws.wiklund.guides.db.BeverageDatabaseHelper;
 import ws.wiklund.guides.model.Category;
+import ws.wiklund.vinguiden_pro.R;
 import ws.wiklund.vinguiden_pro.db.WineDatabaseHelper;
 import android.app.AlertDialog;
 import android.content.DialogInterface;

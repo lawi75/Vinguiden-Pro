@@ -2,11 +2,11 @@ package ws.wiklund.vinguiden_pro.list;
 
 import java.util.Date;
 
-import ws.wiklund.guides.R;
 import ws.wiklund.guides.bolaget.SystembolagetParser;
 import ws.wiklund.guides.model.Category;
 import ws.wiklund.guides.util.BitmapManager;
 import ws.wiklund.guides.util.ViewHelper;
+import ws.wiklund.vinguiden_pro.R;
 import ws.wiklund.vinguiden_pro.util.BeverageAndCellarContainer;
 import android.content.Context;
 import android.database.Cursor;

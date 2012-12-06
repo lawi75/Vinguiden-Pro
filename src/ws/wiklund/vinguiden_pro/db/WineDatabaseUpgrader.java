@@ -1,7 +1,9 @@
 package ws.wiklund.vinguiden_pro.db;
 
 import ws.wiklund.guides.db.DatabaseUpgrader;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 public class WineDatabaseUpgrader extends DatabaseUpgrader {
 	public WineDatabaseUpgrader(SQLiteDatabase db) {
@@ -10,9 +12,10 @@ public class WineDatabaseUpgrader extends DatabaseUpgrader {
 
 	//Available DB versions
 	static final int VERSION_1 = 1;
+	static final int VERSION_2 = 2;
 
 	public int upgrade(int oldVersion, int newVersion) {
-		/*int version = -1;
+		int version = -1;
 
 		switch (oldVersion) {
 			case VERSION_1:
@@ -28,39 +31,19 @@ public class WineDatabaseUpgrader extends DatabaseUpgrader {
 				}
 				
 				break;				
-			case VERSION_2:
-				if(newVersion > VERSION_2) {
-					version = moveToVersion3();
-					Log.d(WineDatabaseUpgrader.class.getName(), "Upgraded DB from version [" + oldVersion + "] to version [" + version + "]");
-
-					if(version < newVersion) {
-						return upgrade(version, newVersion);
-					} 
-					
-					return VERSION_3;
-				}
-
-				break;
-			case VERSION_3:
-				if(newVersion > VERSION_3) {
-					version = moveToVersion4();
-					Log.d(WineDatabaseUpgrader.class.getName(), "Upgraded DB from version [" + oldVersion + "] to version [" + version + "]");
-
-					if(version < newVersion) {
-						return upgrade(version, newVersion);
-					} 
-					
-					return VERSION_4;					
-				}
-				break;
 			default:
 				break;
 		}
 
-		return version;*/
-		
-		return VERSION_1;
+		return version;
 	}
+	
+	private int moveToVersion2() throws SQLException {
+		insertImageColumnToBeverage();
+		
+		return VERSION_2;
+	}
+	
 
 	@Override
 	public void createAndPopulateBeverageTypeTable(SQLiteDatabase db) {
