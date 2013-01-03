@@ -116,7 +116,10 @@ public class CellarFlowActivity extends BaseActivity implements Notifyable {
 	
 	@Override
 	protected void onDestroy() {
-		adapter.destroy();
+		if (adapter != null) {
+			adapter.destroy();
+		}
+		
 		super.onDestroy();
 	}
 

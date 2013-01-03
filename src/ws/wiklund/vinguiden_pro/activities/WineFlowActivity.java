@@ -108,13 +108,22 @@ public class WineFlowActivity extends BaseActivity implements Notifyable {
 	}
 	
 	public void notifyDataSetChanged() {
-		layoutHelper.setNoBottlesToTitle(helper.getNoBottlesInCellar(), (TextView) findViewById(R.id.title));
-		adapter.notifyDataSetChanged();
+		if (layoutHelper != null && helper != null) {
+			layoutHelper.setNoBottlesToTitle(helper.getNoBottlesInCellar(),
+					(TextView) findViewById(R.id.title));
+		}
+		
+		if (adapter != null) {
+			adapter.notifyDataSetChanged();
+		}
 	}
 	
 	@Override
 	protected void onDestroy() {
-		adapter.destroy();
+		if (adapter != null) {
+			adapter.destroy();
+		}
+		
 		super.onDestroy();
 	}
 
