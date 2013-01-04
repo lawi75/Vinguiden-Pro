@@ -51,7 +51,7 @@ public class BootStrapHandler  {
 							Log.e(WineListActivity.class.getName(), "Failed to start activity for export/import", t);
 							Toast.makeText(context, context.getString(R.string.failedToExportTryUpdate), Toast.LENGTH_SHORT).show();  		
 						}
-					} 
+					}
 				});
 				
 				alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, context.getString(R.string.empty), new DialogInterface.OnClickListener() {
@@ -74,13 +74,14 @@ public class BootStrapHandler  {
 		context.startActivity(intent);
 	}
 	
+	
 	private static void replaceDatabase() throws IOException {
     	File src = new File(Environment.getExternalStorageDirectory(), "export.db");
 		File dest = new File(Environment.getDataDirectory() + "/data/ws.wiklund.vinguiden_pro/databases/wineguide_pro.db");
 		
 		ViewHelper.copyFile(src, dest);
 	}
-
+	
 	private static void removeOldDatabaseFromSD() {
     	File src = new File(Environment.getExternalStorageDirectory(), "export.db");
     	src.delete();

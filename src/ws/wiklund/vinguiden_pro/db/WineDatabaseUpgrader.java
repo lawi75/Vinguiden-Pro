@@ -1,6 +1,7 @@
 package ws.wiklund.vinguiden_pro.db;
 
 import ws.wiklund.guides.db.DatabaseUpgrader;
+import ws.wiklund.guides.model.BeverageType;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
@@ -9,10 +10,6 @@ public class WineDatabaseUpgrader extends DatabaseUpgrader {
 	public WineDatabaseUpgrader(SQLiteDatabase db) {
 		super(db);
 	}
-
-	//Available DB versions
-	static final int VERSION_1 = 1;
-	static final int VERSION_2 = 2;
 
 	public int upgrade(int oldVersion, int newVersion) {
 		int version = -1;
@@ -31,6 +28,24 @@ public class WineDatabaseUpgrader extends DatabaseUpgrader {
 				}
 				
 				break;				
+			case VERSION_2:
+				if(newVersion > VERSION_2) {
+					version = moveToVersion3();
+					Log.d(WineDatabaseUpgrader.class.getName(), "Upgraded DB from version [" + oldVersion + "] to version [" + version + "]");
+					
+					if(version < newVersion) {
+						return upgrade(version, newVersion);
+					} 
+					
+					return VERSION_3;
+				}
+				
+				break;	
+			case VERSION_3:
+			case VERSION_4:
+			case VERSION_5:
+			case VERSION_6:
+				return VERSION_7;				
 			default:
 				break;
 		}
@@ -44,6 +59,15 @@ public class WineDatabaseUpgrader extends DatabaseUpgrader {
 		return VERSION_2;
 	}
 	
+	private int moveToVersion3() {
+		db.execSQL("DROP TABLE IF EXISTS " + WineDatabaseHelper.BEVERAGE_TYPE_TABLE);
+		
+		createAndPopulateBeverageTypeTable(db);
+		
+		addOtherBeverageType();
+
+		return VERSION_3;
+	}
 
 	@Override
 	public void createAndPopulateBeverageTypeTable(SQLiteDatabase db) {
@@ -61,6 +85,7 @@ public class WineDatabaseUpgrader extends DatabaseUpgrader {
 		insertBeverageType(8, "Fruktvin");
 		insertBeverageType(9, "Fruktvin, Sött");
 		insertBeverageType(10, "Fruktvin, Torrt");
+		insertBeverageType(BeverageType.OTHER.getId(), BeverageType.OTHER.getName());
 	}
 
 }

@@ -6,6 +6,7 @@ import java.util.List;
 import ws.wiklund.guides.activities.ModifyBeverageActivity;
 import ws.wiklund.guides.db.BeverageDatabaseHelper;
 import ws.wiklund.guides.model.Category;
+import ws.wiklund.guides.util.ViewHelper;
 import ws.wiklund.vinguiden_pro.R;
 import ws.wiklund.vinguiden_pro.db.WineDatabaseHelper;
 import android.app.AlertDialog;
@@ -19,6 +20,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 public class ModifyWineActivity extends ModifyBeverageActivity {
+	private final static List<String> strengths = new ArrayList<String>();
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,17 @@ public class ModifyWineActivity extends ModifyBeverageActivity {
 	protected Class<?> getIntentClass() {
 		return WineListActivity.class;
 	}
+	
+	@Override
+	protected List<String> getStrengths() {
+		if (strengths.isEmpty()) {
+			for (Double i = 9.0; i <= 20.0; i += 0.1) {
+				strengths.add(ViewHelper.getDecimalStringFromNumber(i) + " %");
+			}
+		}
+		
+		return strengths;
+	}	
 	
 	private void populateCategorySpinner() {
 		List<Category> categories = new ArrayList<Category>();
