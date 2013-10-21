@@ -85,7 +85,6 @@ public class WineDatabaseUpgrader extends DatabaseUpgrader {
 		insertBeverageType(8, "Fruktvin");
 		insertBeverageType(9, "Fruktvin, Sött");
 		insertBeverageType(10, "Fruktvin, Torrt");
-		insertBeverageType(BeverageType.OTHER.getId(), BeverageType.OTHER.getName());
 	}
 
 }

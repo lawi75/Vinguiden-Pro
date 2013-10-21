@@ -104,6 +104,8 @@ public class CellarActivity extends CustomListActivity {
 			db = new WineDatabaseHelper(this).getReadableDatabase();
 		}
 		
+		sortColumn = validateSortColumn(sortColumn);
+		
 		return db.rawQuery(WineDatabaseHelper.SQL_SELECT_BEVERAGES_IN_CELLAR + " ORDER BY " + sortColumn, new String[]{String.valueOf(beverage.getId())});
 	}
 
